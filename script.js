@@ -18,12 +18,12 @@ const noteP = document.getElementsByClassName("note");
 document.getElementById("btn-create").addEventListener("click", () => {
   console.log("todo created");
 });
-document.getElementById("btn-remove").addEventListener("click", () => {
-  console.log("Remove all");
-  document.querySelectorAll(".note").forEach(note => {
-    note.remove();
-  });
-});
+// document.getElementById("btn-remove").addEventListener("click", () => {
+//   console.log("Remove all");
+//   document.querySelectorAll(".note").forEach(note => {
+//     note.remove();
+//   });
+// });
 
 const filters = {
   searchText: ""
@@ -52,4 +52,19 @@ document.getElementById("search-text").addEventListener("input", e => {
   filters.searchText = e.target.value;
   //call when user interacts
   renderNotes(notes, filters);
+});
+
+// document.getElementById("name-form").addEventListener("submit", e => {
+//   e.preventDefault();
+//   //get form field value
+
+//   const fromInfo = e.target.elements.firstName.value;
+//   console.log(fromInfo);
+//   e.target.elements.firstName.value = "";
+// });
+// document.getElementById("for-fun").addEventListener("change", e => {
+//   console.log(e.target.checked);
+// });
+document.getElementById("filter-by").addEventListener("change", e => {
+  console.log(e.target.value);
 });
